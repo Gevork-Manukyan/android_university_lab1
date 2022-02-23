@@ -32,7 +32,7 @@ class BestSellerBooksRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
         holder.mItem = books[position]
-        holder.mBookRanking.text = books[position].rank.toString()
+        holder.mBookRanking.text = String.format("%d", books[position].rank)
         holder.mBookDescription.text = books[position].description
         holder.mBookTitle.text = books[position].title
         holder.mBookAuthor.text = books[position].author
